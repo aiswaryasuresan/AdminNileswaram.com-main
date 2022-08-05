@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 final _url = 'https://www.astrasoftwaresolutions.com';
 //final Uri _url = Uri.parse('https://www.astrasoftwaresolutions.com');
 final phoneNumber = '+91 0895450639';
-final url = 'sms:$phoneNumber';
+final url = 'tel:$phoneNumber';
 final facebook =
     "https://www.facebook.com/astrasoftwaresolutions/?_ga=2.205114320.1569442231.1651966123-973336704.1651966123";
 final instagram =
@@ -89,7 +89,7 @@ class _About_UsState extends State<About_Us> {
           alignment: Alignment(0, 0.2),
           child: Container(
             width: MediaQuery.of(context).size.width / 1.1,
-            height: MediaQuery.of(context).size.height / 1.6,
+            height: MediaQuery.of(context).size.height / 1.2,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0),
@@ -214,24 +214,7 @@ class _About_UsState extends State<About_Us> {
                           ),
 
                         ]),
-                    // RaisedButton(
-                    //   child: Text("Open Mail App"),
-                    //   onPressed: () async {
-                    //     var result = await OpenMailApp.openMailApp();
-                    //     if (!result.didOpen && !result.canOpen) {
-                    //       showNoMailAppsDialog(context);
-                    //     } else if (!result.didOpen && result.canOpen) {
-                    //       showDialog(
-                    //         context: context,
-                    //         builder: (_) {
-                    //           return MailAppPickerDialog(
-                    //             mailApps: result.options,
-                    //           );
-                    //         },
-                    //       );
-                    //     }
-                    //   },
-                    // ),
+
                   ],
                 ),
               ),

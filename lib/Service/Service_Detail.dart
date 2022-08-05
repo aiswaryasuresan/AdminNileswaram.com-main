@@ -20,12 +20,40 @@ class Service_Detail extends StatelessWidget {
       //   backgroundColor: Colors.pink.shade800,
       //   title: Text(passing_data.name),
       // ),
+      appBar: AppBar(
+        backgroundColor: Colors.pink.shade800,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_rounded),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.delete),
+            onPressed: () {
+              // confirm();
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.edit),
+            onPressed: () {
+              // Navigator.of(context).push(
+              //   MaterialPageRoute(
+              //     builder: (BuildContext context)=>Tourist_Update(list: widget.list, index: widget.index,),
+              //   ),
+              // );
+
+            },
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Stack(
           children: [
             FullScreenWidget(
               child: Container(
-                height: MediaQuery.of(context).size.height / 2.5,
+                height: MediaQuery.of(context).size.height / 2.2,
                 width: MediaQuery.of(context).size.width / 0.5,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -130,7 +158,7 @@ class Service_Detail extends StatelessWidget {
                             width: 130,
                             decoration: BoxDecoration(
                                 color: Colors.orange.shade100,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: GestureDetector(
                                   onTap: () async => !await launch('tel:' + passing_data.phone),
@@ -159,7 +187,7 @@ class Service_Detail extends StatelessWidget {
                             width: 130,
                             decoration: BoxDecoration(
                                 color: Colors.orange.shade100,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: GestureDetector(
                                   onTap: () async => !await launch('tel:' + passing_data.mobile),
@@ -214,7 +242,7 @@ class Service_Detail extends StatelessWidget {
                             width: 180,
                             decoration: BoxDecoration(
                                 color: Colors.orange.shade100,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: GestureDetector(
                                   onTap: ()async {
@@ -288,7 +316,7 @@ class Service_Detail extends StatelessWidget {
                             width: 50,
                             decoration: BoxDecoration(
                                 color: Colors.orange.shade100,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: Text(
                                   passing_data.blood,

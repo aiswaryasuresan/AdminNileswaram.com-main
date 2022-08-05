@@ -27,7 +27,7 @@ class Public_organisation_Detail extends StatelessWidget {
                 height: MediaQuery
                     .of(context)
                     .size
-                    .height / 2.5,
+                    .height / 2.2,
                 width: MediaQuery
                     .of(context)
                     .size
@@ -121,11 +121,11 @@ class Public_organisation_Detail extends StatelessWidget {
                             width: 130,
                             decoration: BoxDecoration(
                                 color: Colors.pink.shade50,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: GestureDetector(
                                   onTap: () async =>
-                                  !await launch('sms:' + passing_data.phone),
+                                  !await launch('tel:' + passing_data.phone),
                                   child: Text(
                                     passing_data.phone,
                                     style: GoogleFonts.inter(
@@ -151,11 +151,11 @@ class Public_organisation_Detail extends StatelessWidget {
                             width: 130,
                             decoration: BoxDecoration(
                                 color: Colors.pink.shade50,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: GestureDetector(
                                   onTap: () async =>
-                                  !await launch('sms:' + passing_data.mobile),
+                                  !await launch('tel:' + passing_data.mobile),
                                   child: Text(
                                     passing_data.mobile,
                                     style: GoogleFonts.inter(

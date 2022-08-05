@@ -19,12 +19,40 @@ class Vie_More_Detail extends StatelessWidget {
       //   backgroundColor: Colors.pink.shade800,
       //   title: Text(passing_data.name),
       // ),
+      appBar: AppBar(
+        backgroundColor: Colors.pink.shade800,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_rounded),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.delete),
+            onPressed: () {
+              // confirm();
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.edit),
+            onPressed: () {
+              // Navigator.of(context).push(
+              //   MaterialPageRoute(
+              //     builder: (BuildContext context)=>Tourist_Update(list: widget.list, index: widget.index,),
+              //   ),
+              // );
+
+            },
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Stack(
           children: [
             FullScreenWidget(
               child: Container(
-                height: MediaQuery.of(context).size.height / 2.5,
+                height: MediaQuery.of(context).size.height / 2.2,
                 width: MediaQuery.of(context).size.width / 0.5,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -128,7 +156,7 @@ class Vie_More_Detail extends StatelessWidget {
                             width: 130,
                             decoration: BoxDecoration(
                                 color: Colors.pink.shade50,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: GestureDetector(
                                   onTap: () async => !await launch('tel:' + passing_data.phone),
@@ -157,7 +185,7 @@ class Vie_More_Detail extends StatelessWidget {
                             width: 130,
                             decoration: BoxDecoration(
                                 color: Colors.pink.shade50,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: GestureDetector(
                                   onTap: () async => !await launch('tel:' + passing_data.mobile),
@@ -209,10 +237,10 @@ class Vie_More_Detail extends StatelessWidget {
                           ),
                           Container(
                             height: 20,
-                            width: 180,
+                            width: 200,
                             decoration: BoxDecoration(
                                 color: Colors.pink.shade50,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: GestureDetector(
                                   onTap: ()async {
@@ -286,7 +314,7 @@ class Vie_More_Detail extends StatelessWidget {
                             width: 50,
                             decoration: BoxDecoration(
                                 color: Colors.pink.shade50,
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: Text(
                                   passing_data.blood,
@@ -302,58 +330,7 @@ class Vie_More_Detail extends StatelessWidget {
                   ),
 
                   SizedBox(height: 20,),
-                  // Row(
-                  //   children: [
-                  //     // SizedBox(
-                  //     //   width: MediaQuery.of(context).size.width / 20,
-                  //     // ),
-                  //     // Container(
-                  //     //     height: 35,
-                  //     //     width: 35,
-                  //     //     child: Icon(
-                  //     //       Icons.format_list_bulleted,
-                  //     //       size: 20,
-                  //     //     ),
-                  //     //     decoration: BoxDecoration(
-                  //     //         color: Colors.grey.shade300,
-                  //     //         borderRadius: BorderRadius.circular(10))),
-                  //     // SizedBox(
-                  //     //   width: 20,
-                  //     // ),
-                  //     Column(
-                  //       crossAxisAlignment: CrossAxisAlignment.start,
-                  //       children: [
-                  //         Text(
-                  //           "Other Products",
-                  //           style: GoogleFonts.inter(
-                  //               fontSize: 13,
-                  //               fontWeight: FontWeight.bold,
-                  //               color: Colors.grey.shade600),
-                  //         ),
-                  //         SizedBox(
-                  //           height: 5,
-                  //         ),
-                  //         Container(
-                  //           // height: 150,
-                  //           // width: 300,
-                  //           height:MediaQuery.of(context).size.height/6,
-                  //           width:MediaQuery.of(context).size.width/1.2,
-                  //           decoration: BoxDecoration(
-                  //               color: Colors.pink.shade50,
-                  //               borderRadius: BorderRadius.circular(10)),
-                  //           child: Center(
-                  //               child: Text(
-                  //                 passing_data.other_pro,
-                  //                 style: GoogleFonts.inter(
-                  //                     fontSize: 12,
-                  //                     fontWeight: FontWeight.bold,
-                  //                     color: Colors.pink.shade300),
-                  //               )),
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   ],
-                  // ),
+
               Text(
                           "Other Products",
                           style: GoogleFonts.inter(
@@ -382,19 +359,7 @@ class Vie_More_Detail extends StatelessWidget {
 
 
                   SizedBox(height: 30,),
-                  // Container(
-                  //   // child: Image.asset('assets/location.jpeg'),
-                  //   height:MediaQuery.of(context).size.height/6,
-                  //   width:MediaQuery.of(context).size.width/1.2,
-                  //   decoration: BoxDecoration(
-                  //       border: Border.all(width: 1,color: Colors.red.shade100),
-                  //       color: Colors.grey,
-                  //       image: DecorationImage(
-                  //         image: AssetImage('assets/loca.jpeg'),
-                  //         fit: BoxFit.cover,
-                  //       ),
-                  //       borderRadius: BorderRadius.circular(10)),
-                  // ),
+
                   Padding(
                     padding: EdgeInsets.all(20),
                     child: ElevatedButton(

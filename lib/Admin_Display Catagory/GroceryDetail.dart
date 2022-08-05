@@ -103,7 +103,7 @@ class _GroceryDetailState extends State<GroceryDetail> {
             children: [
               FullScreenWidget(
                 child:new Container(
-                  height: MediaQuery.of(context).size.height / 2.5,
+                  height: MediaQuery.of(context).size.height / 2.2,
                   width: MediaQuery.of(context).size.width / 0.5,
                   decoration: BoxDecoration(
                     image: DecorationImage(
@@ -204,7 +204,7 @@ class _GroceryDetailState extends State<GroceryDetail> {
                               width: 130,
                               decoration: BoxDecoration(
                                   color: Colors.pink.shade50,
-                                  borderRadius: BorderRadius.circular(10)),
+                                  borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                   child: GestureDetector(
                                     onTap: () async => !await launch('tel:' + widget.list[widget.index]['phone']),
@@ -233,7 +233,7 @@ class _GroceryDetailState extends State<GroceryDetail> {
                               width: 130,
                               decoration: BoxDecoration(
                                   color: Colors.pink.shade50,
-                                  borderRadius: BorderRadius.circular(10)),
+                                  borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                   child: GestureDetector(
                                     onTap: () async => !await launch('tel:' + widget.list[widget.index]['mobile']),
@@ -285,10 +285,10 @@ class _GroceryDetailState extends State<GroceryDetail> {
                             ),
                             Container(
                               height: 20,
-                              width: 180,
+                              width: 200,
                               decoration: BoxDecoration(
                                   color: Colors.pink.shade50,
-                                  borderRadius: BorderRadius.circular(10)),
+                                  borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                   child: GestureDetector(
                                     onTap: ()async {
@@ -362,7 +362,7 @@ class _GroceryDetailState extends State<GroceryDetail> {
                               width: 50,
                               decoration: BoxDecoration(
                                   color: Colors.pink.shade50,
-                                  borderRadius: BorderRadius.circular(10)),
+                                  borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                   child: Text(
                                     widget.list[widget.index]['blood'],
